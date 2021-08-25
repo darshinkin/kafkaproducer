@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: kafka-producer
+endpoints:
+  restart:
+    enabled: true
+logging:
+  level:
+    root: INFO
+kafka:
+  bootstrap-server: ${KAFKA_ENDPOINTS}
+  acks: all
+  retries: 10
+  batchSize: 16384
+  lingerMs: 10
+  bufferMemory: 33554432
+  registry-url: ${SCHEMA_REGISTRY_ENDPOINTS}
+  topic: ${TOPIC_RWS_TRIGG}
+server:
+  port: ${SERVICE_PORT}

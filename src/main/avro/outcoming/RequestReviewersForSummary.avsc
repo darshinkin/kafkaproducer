@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "RequestReviewersForSummary",
+  "namespace": "com.epam.feedback.infra.trigger.summary",
+  "doc": "Event for requesting reviewers for created auto-summary",
+  "fields": [
+    { "name": "summary_id", "type": "string", "doc": "Auto-summary ID" },
+    { "name": "reviewee_pmcid", "type": "long", "doc": "PMC ID of auto-summary's reviewee" },
+    { "name": "trigger_name", "type": "com.epam.feedback.infra.trigger.TriggerEventType", "doc": "Trigger's event's type of created auto-summary" },
+    { "name": "triggered_role_name", "type": "string", "doc": "Reviewee's role name" },
+    { "name": "triggered_project_code", "type": "string", "doc": "Reviewee's project code" }
+  ]
+}

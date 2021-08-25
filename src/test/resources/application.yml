@@ -1,0 +1,9 @@
+kafka:
+  bootstrap-server: 127.0.0.1:9022
+  registry-url: 127.0.0.1:8091
+  topic: backend.request-reviewers-for-summary
+  acks: all
+  retries: 10
+  batchSize: 16384
+  lingerMs: 10
+  bufferMemory: 33554432

@@ -1,0 +1,11 @@
+{
+  "type": "enum",
+  "name": "TriggerEventType",
+  "namespace": "com.epam.feedback.infra.trigger",
+  "doc": "Trigger's event's types for processing integration's events on Feedback Backend side",
+  "symbols": [
+    "POSITION_TERMINATION",
+    "PROJECT_ASSIGNMENT",
+    "PROJECT_ROLE_CHANGE"
+    ]
+}
