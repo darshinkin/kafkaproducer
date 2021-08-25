@@ -1,9 +1,13 @@
 package com.home.example.kafkaproducer.controllers;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.function.EntityResponse;
 
+import com.epam.feedback.infra.trigger.summary.RequestReviewersForSummary;
 import com.home.example.kafkaproducer.services.ReviewersSummaryService;
 
 import lombok.RequiredArgsConstructor;
@@ -17,7 +21,7 @@ public class ReviewersForSummaryController {
 
     @GetMapping("/generate")
     public String lookup() {
-        reviewersSummaryService.generateAndSendRandomRequests();
-        return "Domain crawler has scrapped your data";
+        List<RequestReviewersForSummary> requests = reviewersSummaryService.generateAndSendRandomRequests();
+        return "Request review summary has been generated: " + requests;
     }
 }

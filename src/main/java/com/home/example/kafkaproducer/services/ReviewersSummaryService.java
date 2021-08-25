@@ -12,8 +12,9 @@ public class ReviewersSummaryService {
     private final ReviewersForSummaryGeneratorService generator;
     private final ProducerService producerService;
 
-    public void generateAndSendRandomRequests() {
+    public List<RequestReviewersForSummary> generateAndSendRandomRequests() {
         List<RequestReviewersForSummary> requests = generator.generateRequests();
         producerService.send(requests);
+        return requests;
     }
 }

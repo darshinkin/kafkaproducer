@@ -1,6 +1,6 @@
 kafka:
-  bootstrap-server: 192.168.1.114:9092
-  registry-url: http://192.168.1.114:8091
+  bootstrap-server: 192.168.1.129:19092
+  registry-url: http://192.168.1.129:8091
   topic: backend.request-reviewers-for-summary
 server:
   port: 8089
